@@ -152,6 +152,7 @@
   <ItemGroup>
     <ClCompile Include="Citizen.cpp" />
     <ClCompile Include="City.cpp" />
+    <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
