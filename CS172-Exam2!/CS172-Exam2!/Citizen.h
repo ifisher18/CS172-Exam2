@@ -39,4 +39,11 @@ public:
 
 private:
 	// what additional private properties the Citizen class needs?
+	// I'm thinking that some additional private properties would be:
+	string FName;
+	string LName;
+	int Id;
+	string color;
+	// in addition to what is passed in, we need to define the above as private elements of the data field
+
 };

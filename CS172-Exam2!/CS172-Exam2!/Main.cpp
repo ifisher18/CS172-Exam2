@@ -17,6 +17,11 @@
 using namespace std;
 int main() {
 
+	/////////////////////////////////////////////////////////////////
+	/////// For the bonus point: ahh I think I've heard these names in mountain biking/bmx
+	/////// Are all of these names professional bmxers/mountain bikers??
+	/////////////////////////////////////////////////////////////////////////////
+
 	/*
 	* DO NOT CHANGE THIS CODE FOR YOUR EXAM!
 	*/
@@ -30,6 +35,8 @@ int main() {
 
 	//Check if we need to add citizens to Spokane
 	//Bonus point if you can tell me why I picked these names and Ids ;)
+	
+
 	if (spokane->populationSize() == 0)
 	{
 		Citizen* brandon = new Citizen(1, "Brandon", "Semenuk", "Green");

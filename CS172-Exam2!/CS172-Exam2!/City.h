@@ -13,6 +13,9 @@ class City
 
 public:
 
+	// data field
+	string Cityname; // created as a public variable to hold the name of city when needed
+
 	//Creates a new city with the given name
 	//When the city is created you need to restore
 	//it's population from a file.
@@ -49,5 +52,8 @@ public:
 	//For example, if color is “Blue” this will return all citizens
 	//for this city who’s favorite color is Blue.
 	vector<Citizen*> getCitizensForFavoriteColor(string color);
+
+	// added function that saves the inputed data to the file named cityName
+	void saveDataToFile(string cityName)
 };
 

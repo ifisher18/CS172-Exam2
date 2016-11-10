@@ -2,7 +2,10 @@
 //adhered to the rules stated for this exam.
 
 #include <iostream>
+#include <fstream>
+#include <vector>
 #include "Citizen.h"
+
 using namespace std;
 
 // ** Need to implement code below **
@@ -11,15 +14,32 @@ using namespace std;
 	//Creates a new Citizen object with the passed in
 	//id, name, and favorite color
 	//Once a citizen is created, you can't change their id or name
-	//but you can change their favorite color
-Citizen::Citizen(int id, string firstName, string lastName, string color) {}
+	//but you can change their favorite color\
+
+// from my understanding this constructor just initializes the 4 passed in vals
+Citizen::Citizen( int id, string firstName, string lastName, string color) {
+	id = 0; // sets default value for id for the constructor: 0
+	firstName = " "; // sets the default value for first name for the constructor: whitespace character
+	lastName = " "; // sets the default value for the last name for the constructor: whitespace char.
+	color = " "; // sets the default value for the color of constructor: whitespace char again
+}
 
 	//Creates a new Citizen object by copying data from the
 	//passed in citizen
-Citizen::Citizen(Citizen* citizen) {}
+
+// my interpretation is that i would just copy over to a new citizen1 object
+// then delete the old
+Citizen::Citizen(Citizen* citizen) {
+	Citizen new citizen1(citizen); // use copy constructor...attempting to use new to create a new object called citizen1
+	delete &citizen1; // after creating citizen, a copy of citizen, must delete old memory
+}
 
 	//Returns the first name of this citizen
-string Citizen::getFirstName() {}
+string Citizen::getFirstName() {
+	ifstream fin1()
+	
+	return 
+}
 
 	//Returns the last name of this citizen
 string Citizen::getLastName() {}
@@ -28,9 +48,23 @@ string Citizen::getLastName() {}
 int Citizen::getId() {}
 
 	//Returns the favorite color for this citizen
-string Citizen::getFavoriteColor() {}
+string Citizen::getFavoriteColor() {\}
 
 	//Sets the favorite color for this citizen
-void Citizen::setFavoriteColor(string color) {}
+// the process of this function is read data from the specific file for each city, then analyse the file and find the particular
+// citizen that needs their color changed
+// finally, fout the right color at that line in the file
+void Citizen::setFavoriteColor(string color) {
+	ofstream fout1("Nameof City"); // NEED TO FIX THIS: ofstream to read data to file
+	if (!fout1.fail()) { // if the file opens...
+		for (int i = 0; i < data.size(); i++) {
+			if (fout1 = Citizen) { // if the loop arives at the correct citizen
+				fout1 << color << " " << endl; // sets the color as what is passed in for the citizen
+			}
+			else
+
+		}
+	}
+}
 
 };
