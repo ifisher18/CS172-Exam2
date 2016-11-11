@@ -54,6 +54,14 @@ public:
 	vector<Citizen*> getCitizensForFavoriteColor(string color);
 
 	// added function that saves the inputed data to the file named cityName
-	void saveDataToFile(string cityName)
+	void saveDataToFile(string cityName);
+
+	// these are the additional private properties that should be in the City class
+private:
+	string FirstName;
+	string CityName;
+	string LastName;
+	int Id;
+	
 };
 

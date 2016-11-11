@@ -85,30 +85,49 @@ City::Citizen* getCitizenAtIndex(int index) {
 	//Adds a citizen to this city. You will need to
 	//make a copy of this citizen so that you make
 	//sure to keep it around for the life of the city.
-void City::addCitizen(Citizen* citizen) {}
+
+		// generally speaking, this function adds a citizen and then makes a copy of this same citizen
+void City::addCitizen(Citizen* citizen) {
+	// adds a citizen to the city
+	ifstream input(Cityname + ".txt"); // accesses the city text file and 'preps' for input
+	input >> Citizen; // inputs the citizen into the file
+
+		// need to make a copy
+	// first need to create a file to make a copy of
+	ofstream inputCopy;
+	// Then need to transfer contents to inputCopy
+	for (i = 0; i << input.size(); i++) {
+		input[i] = inputCopy[i]; // copies the contents of this new entry
+	}
+	input.close(); // closes the file
+}
 
 	//Returns the citizen with the given id.
 City::Citizen* getCitizenWithId(int id) {
-	vector<Citizen> string; // creates a vector of type string
-
+	for (int i = 0; i < 1000; i++) { // loop is created to cycle through and identify the citizen with the given id.
+		while (CityName + ".txt" >> id) { // loop that checks through the file for the given id
+			return *citizen;
+		}
+	}
 }
 
 	//Returns a vector of citizens that all have
 	//the given color as their favorite color.
 	//For example, if color is “Blue” this will return all citizens
 	//for this city who’s favorite color is Blue.
+// not sure exactly how to implement this function, but the function will return a vector as mentions aboved
 City::vector<Citizen*> getCitizensForFavoriteColor(string color) {
 	
 }
 
 void City::saveDataToFile(string cityName) // added function to this class
 {
-	ofstream fout(cityName);
-	if (!fout.fail())
+	ofstream fout(cityName + ".txt"); 
+	if (!fout.fail()) // if the file opens,
 	{
-		for (int i = 0; i < data.size(); i++)
+		for (int i = 0; i < data.size(); i++) // for loop that checks through the data
 		{
-			fout << data.at(i).cityName << endl;
+			fout << data.at(i).cityName + ".txt" << endl; // saves the data to the file CityName
 		}
 	}
 	fout.close();

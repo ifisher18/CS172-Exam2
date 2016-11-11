@@ -26,7 +26,6 @@ Citizen::Citizen( int id, string firstName, string lastName, string color) {
 
 	//Creates a new Citizen object by copying data from the
 	//passed in citizen
-
 // my interpretation is that i would just copy over to a new citizen1 object
 // then delete the old
 Citizen::Citizen(Citizen* citizen) {
@@ -35,20 +34,60 @@ Citizen::Citizen(Citizen* citizen) {
 }
 
 	//Returns the first name of this citizen
+	// to return this, we need to access the file of citizens and locate/output the first name
 string Citizen::getFirstName() {
-	ifstream fin1()
-	
-	return 
+	fstream fin1(cityName + ".txt", ios::in|ios::out); // opens the file "cityName + ".txt" for output/input
+		if (!fin1.fail()) { // tests if the file can open or not
+			while (cityName >> FName) { // checks through file for the first name
+				if (FName = cityName >> FName) { // if the desired first name matches a value in text file
+					return FName; // return this name
+				}
+				else return 0; // else, return 0 in this case
+
+			}
+		}
 }
 
 	//Returns the last name of this citizen
-string Citizen::getLastName() {}
+string Citizen::getLastName() {
+	fstream fin1(cityName + ".txt", ios::in | ios::out); // opens the file "cityName + ".txt" for output/input in this function
+	if (!fin1.fail()) { // tests if the file can open or not
+		while (cityName >> LName) { // checks through file for the last name
+			if (LName = cityName >> LName) { // if the desired last name matches a name in the file
+				return FName; // return this name
+			}
+			else return 0; // else, return 0 in this case
+		}
+	}
+}
 
 	//Returns the id for this citizen
-int Citizen::getId() {}
+int Citizen::getId() {
+	fstream fin1(cityName + ".txt", ios::in | ios::out); // opens the file "cityName + ".txt" for output/input
+	if (!fin1.fail()) { // tests if the file can open or not
+		while (cityName >> Id) { // checks through file for the ID number
+			if (Id = cityName >> Id) { // if the desired ID value matches a value in text file
+				return Id; // return this ID
+			}
+			else return 0; // else, return 0 in this case
+
+		}
+	}
+}
 
 	//Returns the favorite color for this citizen
-string Citizen::getFavoriteColor() {\}
+string Citizen::getFavoriteColor() {
+	fstream fin1(cityName + ".txt", ios::in | ios::out); // opens the file "cityName + ".txt" for output/input
+	if (!fin1.fail()) { // tests if the file can open or not
+		while (cityName >> color) { // checks through file for the color
+			if (color = cityName >> color) { // if the desired color matches a color in text file
+				return color; // return this color...for the specific citizen in question
+			}
+			else return 0; // else, return 0 in this case
+
+		}
+	}
+}
 
 	//Sets the favorite color for this citizen
 // the process of this function is read data from the specific file for each city, then analyse the file and find the particular

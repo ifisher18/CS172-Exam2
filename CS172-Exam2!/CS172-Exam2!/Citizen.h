@@ -44,6 +44,8 @@ private:
 	string LName;
 	int Id;
 	string color;
+	// created to hold the name of city when needed:
+	string cityName;
 	// in addition to what is passed in, we need to define the above as private elements of the data field
 
 };
