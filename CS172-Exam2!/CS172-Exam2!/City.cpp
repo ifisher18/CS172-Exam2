@@ -25,7 +25,7 @@ City::City(string cityName) {
 	ofstream fout;
 	fout.open(cityName + ".txt"); // opens the file based on the city name...and creates the file
 	for (int i = 0; i < cityName.size(); i++) {
-		ifstream fin(cityame)
+		ifstream fin(cityName)
 	}
 	fout.close(); // closes fout
 }
@@ -115,9 +115,20 @@ City::Citizen* getCitizenWithId(int id) {
 	//the given color as their favorite color.
 	//For example, if color is “Blue” this will return all citizens
 	//for this city who’s favorite color is Blue.
-// not sure exactly how to implement this function, but the function will return a vector as mentions aboved
+// not sure exactly how to implement this function, but the function will return a vector as mentions aboved that contains all citizens the like the same color
 City::vector<Citizen*> getCitizensForFavoriteColor(string color) {
-	
+	vector<string> temp;
+	fstream fin1(cityName + ".txt", ios::in | ios::out); // opens the file "cityName + ".txt" for output/input in this function
+	if (!fin1.fail()) { // tests if the file can open or not
+		while (cityName + ".txt" >> color) { // while the file is looped through to find the specific color
+			if (color = cityName >> color) { // if this color found for a specific line is equal to the "key" color
+
+				for (i = 0; i < 1000; i++) { // loops through the vector and assigns each now memory location with the specific citizen
+					temp[i] = Citizen;
+				}
+			}
+		}
+	}
 }
 
 void City::saveDataToFile(string cityName) // added function to this class
